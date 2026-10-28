@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+if pgrep -x "rofi" > /dev/null; then
+    pkill -x rofi
+    exit 0
+fi
+
+WALL_DIR="$HOME/Pictures/Wallpapers"
+RASI_THEME="$HOME/.config/rofi/launchers/type-2/style-7.rasi"
+
+if [ ! -d "$WALL_DIR" ]; then
+    notify-send "Error" "Wallpaper directory not found: $WALL_DIR"
+    exit 1
+fi
+
+cd "$WALL_DIR" || exit
+
+SELECTED_WALL=$(for a in *png *jpg *jpeg; do
+    [ -f "$a" ] || continue
+    echo -en "$a\0icon\x1f$WALL_DIR/$a\n"
+done | rofi -dmenu -p "Select Wallpaper" -theme "$RASI_THEME")
+
+if [ -n "$SELECTED_WALL" ]; then
+    awww img "$WALL_DIR/$SELECTED_WALL" --transition-type="wipe" --transition-angle 30 --transition-step 50 --transition-fps 60 
+
+fi

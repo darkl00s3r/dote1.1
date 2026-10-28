@@ -1,0 +1,22 @@
+#!/bin/bash
+
+RASI_THEME="$HOME/.config/rofi/launchers/type-2/style-3.rasi"
+
+# Define your options
+options="Poweroff\n\nSettings\nFiles\nWallpaper\nThemes\nUpdate\nAbout\nPower"
+
+# Pass options to Rofi and capture the selected choice
+CHOSEN=$(echo -e "$options" | rofi -dmenu -p "Power menu:" -theme "$RASI_THEME")
+
+# Perform actions based on the choice
+case "$CHOSEN" in
+    "Apps") ~/.config/rofi/launchers/type-2/launcher.sh ;;
+    "VScodim") vscodium ;;
+    "Settings") ;;
+    "Files") thunar ;;
+    "Wallpaper") ~/.config/hypr/scripts/wallset ;;
+    "Themes") ;;
+    "Update") ;;
+    "About") kity;;
+    "Power") ~/.config/rofi/applets/launcher.sh;;
+esac

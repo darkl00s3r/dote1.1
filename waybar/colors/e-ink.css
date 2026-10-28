@@ -1,0 +1,42 @@
+/* Palette E-Ink pour Waybar */
+@define-color fg          rgba(71, 71, 71, 0.99);
+@define-color bg_gruv     rgba(204, 204, 204, 0.99);
+@define-color bg0         #CCCCCC;
+@define-color bg1         #CCCCCC;
+@define-color bg2         #CCCCCC;
+@define-color bg3         #CCCCCC;
+@define-color bg4         #CCCCCC;
+@define-color bg5         #CCCCCC;
+
+@define-color bg_dim      #5E5E5E;
+
+@define-color red         #333333;
+@define-color red1        #333333;
+@define-color green       #9A9A9A;
+@define-color blue        #727272;
+@define-color blue1       #727272;
+@define-color yellow      #868686;
+@define-color purple      #AEAEAE;
+@define-color orange      #4A4A4A;
+@define-color aqua        #4A4A4A;
+@define-color aqua1       #4A4A4A;
+
+@define-color grey        #5E5E5E;
+@define-color grey0       #5E5E5E;
+@define-color grey1       #5E5E5E;
+@define-color grey2       #5E5E5E;
+@define-color white1      #7C7C7C;
+@define-color white2      #7C7C7C;
+
+/* Extras from the palette (optional) */
+@define-color bg_diff_red     #CCCCCC;
+@define-color bg_diff_green   #CCCCCC;
+@define-color bg_diff_blue    #CCCCCC;
+@define-color bg_visual_red   #AEAEAE;
+@define-color bg_visual_green #AEAEAE;
+@define-color bg_visual_blue  #AEAEAE;
+@define-color bg_visual_yellow #AEAEAE;
+@define-color bg_visual_purple #AEAEAE;
+@define-color bg_red          #333333;
+@define-color bg_green        #9A9A9A;
+@define-color bg_yellow       #868686;
