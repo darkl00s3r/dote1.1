@@ -1,0 +1,61 @@
+Here's both: a set of small problems that follow the W3Schools C++ tutorial order, then one big project that ties it all together. I won't give solutions. Paste your code when you're done and I'll review it and point out bugs or better ways.
+
+## Part 1: Small problems
+
+**Level 1: Basics (variables, input, operators, strings, math)**
+1. Ask for the user's name and age. Print `Hello <name>, next year you will be <age+1>`.
+2. Convert a temperature from Celsius to Fahrenheit (use `double`).
+3. Ask for the width and height of a rectangle. Print its area and perimeter.
+4. Ask for a word. Print its length, its first and last letters, and the word reversed.
+
+**Level 2: Conditions and loops**
+5. Tell whether a number is positive, negative, or zero, and whether it is even or odd.
+6. Convert a score (0-100) to a letter grade using `if/else`. Then use a `switch` to turn a number 1-7 into a day name.
+7. Compute the sum of 1 to N with a `for` loop, then again with a `while` loop.
+8. Print the multiplication table of a number entered by the user.
+9. FizzBuzz from 1 to 100: print `Fizz` for multiples of 3, `Buzz` for multiples of 5, `FizzBuzz` for both, otherwise the number.
+10. Guessing game: the program has a secret number, and the user guesses until correct. Give "higher/lower" hints and count the attempts.
+11. Count the vowels in a sentence typed by the user.
+
+**Level 3: Arrays, functions, references, pointers**
+12. Fill an array of 10 ints. Print the min, max, and average.
+13. Write `bool isPrime(int n)`, then print all primes up to 100.
+14. Write `void swap(int &a, int &b)`. Then rewrite it with pointers: `swap(int *a, int *b)`.
+15. Write recursive functions for factorial and Fibonacci.
+16. Reverse an array in place. Then write a function that takes a pointer to an array and doubles every element.
+
+**Level 4: Structs, enums, OOP**
+17. Create a `struct Student` with a name and a grade. Store 3 students in an array and print the best one.
+18. Create a class `BankAccount` with a private `balance` and the methods `deposit`, `withdraw` (refuse if there isn't enough money), and `getBalance`.
+19. Create a base class `Animal` with a `virtual void makeSound()`. Make `Dog` and `Cat` inherit from it, then store them in an array of `Animal*` and call `makeSound()` on each.
+
+**Level 5: STL, files, exceptions**
+20. Read numbers into a `vector<int>` until the user enters 0. Print them sorted, plus their sum.
+21. Use a `map<string, int>` to count how many times each word appears in a sentence.
+22. Write a few lines to a file, then read them back and print them.
+23. Write `double divide(double a, double b)` that `throw`s an exception if `b == 0`, and catch it in `main`.
+
+## Part 2: The big problem
+
+**Library manager (console program)**
+
+A menu-driven program (looping until the user chooses "Quit") with these features:
+- Add a book (title, author, ID)
+- List all books
+- Search a book by title
+- Borrow and return a book (a book can't be borrowed twice)
+- Save the books to a file on exit and load them at startup
+
+**Requirements:**
+- A `Book` class (private attributes, constructor, getters)
+- A `Library` class holding a `vector<Book>`
+- Use at least one exception (for example, borrowing a book that doesn't exist)
+- Pass objects to functions by reference (`const Book &`) where it makes sense
+
+**Bonus:** add a `Member` class so you track who borrowed which book, or a `Ebook` class that inherits from `Book`.
+
+## How to work
+
+Do Part 1 in order, since each level builds on the previous one. Start Part 2 once you're comfortable with level 4. For the project, build it in small steps (first just `Book` and a list, then the menu, then borrowing, then files), and compile and test after each step.
+
+Send me your code for any exercise when you want feedback.
